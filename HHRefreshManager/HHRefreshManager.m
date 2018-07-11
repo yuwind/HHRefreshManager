@@ -51,11 +51,11 @@
 
 - (void)addNotification:(UIScrollView *)scrollView
 {
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationWillEnterForeground:) name:UIApplicationWillEnterForegroundNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationDidBecomeActive:) name:UIApplicationDidBecomeActiveNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationWillResignActive:) name:UIApplicationWillResignActiveNotification object:nil];
     [scrollView addObserver:self forKeyPath:@"contentOffset" options:NSKeyValueObservingOptionNew context:nil];
 }
-- (void)applicationWillEnterForeground:(NSNotification *)notify
+- (void)applicationDidBecomeActive:(NSNotification *)notify
 {
     if (_isHeaderRefresh){
         if ([_headerView isMemberOfClass:[HHHeaderRefreshView class]]) return;
