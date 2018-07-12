@@ -8,7 +8,8 @@ Pod::Spec.new do |s|
   s.author       = { '豫风' => '991810133@qq.com' }
   s.platform     = :ios, '8.0'
   s.source       = { :git => "https://github.com/yuwind/HHRefreshManager.git", :tag => s.version}
-  s.source_files = 'HHRefreshManager/*.{h,m,bundle}'
+  s.source_files = 'HHRefreshManager/*.{h,m}'
+  s.resource     = 'HHRefreshManager/refreshmImages.bundle'
   s.requires_arc = true
 
 end
