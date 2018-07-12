@@ -3,7 +3,8 @@ This is a simple pretty refresh control that is easy to use.这是一个漂亮�
 
 **[简书地址](https://www.jianshu.com/p/4cd1ef3986ac)**
 
-**效果图**
+**效果图如下：**
+
 ![refreshStar.gif](https://upload-images.jianshu.io/upload_images/1801563-10a3da0712b8e2ce.gif?imageMogr2/auto-orient/strip) ![refreshSemiPoint.gif](https://upload-images.jianshu.io/upload_images/1801563-ee26cb32675a45c2.gif?imageMogr2/auto-orient/strip)
 
 ![refreshSemiCircle.gif](https://upload-images.jianshu.io/upload_images/1801563-eacbe0762160888f.gif?imageMogr2/auto-orient/strip) ![refreshCircle.gif](https://upload-images.jianshu.io/upload_images/1801563-60a4a2415d48db48.gif?imageMogr2/auto-orient/strip)
