@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = 'HHRefreshManager' 
-  s.version      = '1.0.0'
+  s.version      = '1.0.1'
   s.summary      = 'HHRefresh'
   s.description  = 'Mainstream refresh animation'
   s.homepage     = 'https://github.com/yuwind/HHRefreshManager/wiki'
