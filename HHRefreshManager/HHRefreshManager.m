@@ -316,6 +316,12 @@
     _footerView = nil;
 }
 
+- (void)automaticHeaderRefresh
+{
+    _canHeaderRefresh = YES;
+    [_scrollView setContentOffset:CGPointMake(0, -60)];
+}
+
 - (void)dealloc
 {
     !_scrollView?:[_scrollView removeObserver:self forKeyPath:@"contentOffset"];

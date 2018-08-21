@@ -28,6 +28,8 @@
     self.refreshTableView.tableFooterView = [UIView new];
     
     self.refreshManager = [HHRefreshManager refreshWithDelegate:self scrollView:self.refreshTableView type:self.animationType];
+//  自动刷新，类似于新闻类第一次进入APP
+    [self.refreshManager automaticHeaderRefresh];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section

@@ -50,4 +50,9 @@ typedef enum : NSUInteger {
  */
 - (void)removeInitialSubviews;
 
+/**
+ 头部自动刷新
+ */
+- (void)automaticHeaderRefresh;
+
 @end

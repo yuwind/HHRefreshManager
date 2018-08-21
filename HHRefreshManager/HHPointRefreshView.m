@@ -95,6 +95,18 @@
 
 - (void)beginRefresh
 {
+    _middleView.transform = CGAffineTransformIdentity;
+    _leftView.hidden = _rightView.hidden = NO;
+    if (self.isFooter) {
+        _leftView.y = _rightView.y = _middleView.y = (self.height-DEFAULTDIAMETER)/2;
+    }else{
+        _leftView.maxY = _rightView.maxY = _middleView.maxY = self.height - (self.height-DEFAULTDIAMETER)/2;
+    }
+    //todo
+    _middleView.centerX = [UIScreen mainScreen].bounds.size.width/2;
+    _leftView.centerX = [UIScreen mainScreen].bounds.size.width/2 - DEFAULTDISTANCE/2;
+    _rightView.centerX = [UIScreen mainScreen].bounds.size.width/2 + DEFAULTDISTANCE/2;
+    
     _leftView.backgroundColor = _middleView.backgroundColor = _rightView.backgroundColor = REFRESHCOLOR;
     CABasicAnimation *scaleAnim =[CABasicAnimation animationWithKeyPath:@"transform"];
     CATransform3D t = CATransform3DIdentity;
