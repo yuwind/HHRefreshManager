@@ -61,7 +61,7 @@
     CABasicAnimation *basic = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
     basic.fromValue = @(0.0);
     basic.toValue = @(1.0f);
-    basic.duration = 1.0f;
+    basic.duration = 0.1f;
     basic.removedOnCompletion = NO;
     basic.fillMode = kCAFillModeForwards;
     [self.shapeLayer addAnimation:basic forKey:@"AnimationStroke"];
@@ -80,28 +80,29 @@
         self.containerView.centerY = self.height-(self.height-10)/2*rate-5;
     }
     self.shapeLayer.speed = 0.0f;
-    self.shapeLayer.timeOffset = rate;
+    self.shapeLayer.timeOffset = rate/10;
 }
 
 - (void)readyRefresh
 {
-    self.shapeLayer.timeOffset = 1.0f;;
+    self.shapeLayer.timeOffset = 0.1f;
 }
 
 - (void)beginRefresh
 {
     self.shapeLayer.speed = 1.0f;
+    
     CABasicAnimation *rotate = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
     rotate.fromValue = @(0.0);
     rotate.toValue = @(2*M_PI);
     rotate.removedOnCompletion = NO;
     rotate.fillMode = kCAFillModeForwards;
-    
+
     CAKeyframeAnimation *scale =[CAKeyframeAnimation animationWithKeyPath:@"transform.scale"];
     scale.values = @[[NSValue valueWithCGPoint:CGPointMake(1, 1)],[NSValue valueWithCGPoint:CGPointMake(0.6, 0.6)],[NSValue valueWithCGPoint:CGPointMake(1, 1)]];
     scale.removedOnCompletion = NO;
     scale.fillMode = kCAFillModeForwards;
-    
+
     CAAnimationGroup *groupAni = [CAAnimationGroup animation];
     groupAni.duration = 2.0f;
     groupAni.repeatCount = HUGE;
@@ -114,7 +115,7 @@
 - (void)endRefresh
 {
     self.shapeLayer.speed = 0.0f;
-    self.shapeLayer.timeOffset = 0;
+    self.shapeLayer.timeOffset = 0.0f;
     [self.shapeLayer removeAnimationForKey:@"animationGroup"];
 }
 

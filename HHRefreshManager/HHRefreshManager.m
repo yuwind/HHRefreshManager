@@ -318,8 +318,15 @@
 
 - (void)automaticHeaderRefresh
 {
-    _canHeaderRefresh = YES;
-    [_scrollView setContentOffset:CGPointMake(0, -60)];
+    if (self.animationType == AnimationTypeStar) {
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            self.canHeaderRefresh = YES;
+            [self.scrollView setContentOffset:CGPointMake(0, -60)];
+        });
+    }else{
+        self.canHeaderRefresh = YES;
+        [self.scrollView setContentOffset:CGPointMake(0, -60)];
+    }
 }
 
 - (void)dealloc
