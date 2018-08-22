@@ -1,6 +1,6 @@
 //
 //  HHPointRefreshView.m
-//  https://github.com/yuwind/HHRefresh
+//  https://github.com/yuwind/HHRefreshManager
 //
 //  Created by 豫风 on 2018/7/10.
 //  Copyright © 2018年 豫风. All rights reserved.
