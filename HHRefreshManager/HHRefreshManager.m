@@ -173,7 +173,7 @@
 }
 - (void)setIsNeedHeadRefresh:(BOOL)isNeedHeadRefresh
 {
-    _isNeedRefresh = isNeedHeadRefresh;
+    _isNeedHeadRefresh = isNeedHeadRefresh;
     _headerView.hidden = !isNeedHeadRefresh;
 }
 - (void)setIsNeedFootRefresh:(BOOL)isNeedFootRefresh

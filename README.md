@@ -41,7 +41,7 @@ self.refreshManager = [HHRefreshManager refreshWithDelegate:self scrollView:self
 
 ```objc
 target 'MyApp' do
-  pod 'HHRefreshManager', '~> 1.1.0'
+  pod 'HHRefreshManager', '~> 1.1.1'
 end
 ```
 
